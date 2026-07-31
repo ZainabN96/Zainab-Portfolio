@@ -58,12 +58,12 @@
       </p>
       <div class="hero-stats animate-fade-up delay-4">
         <div class="stat-item">
-          <span class="stat-number" data-count="5">0</span><span class="stat-suffix">+</span>
+          <span class="stat-number" data-count="6">0</span><span class="stat-suffix">+</span>
           <span class="stat-label">Years Experience</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
-          <span class="stat-number" data-count="7">0</span><span class="stat-suffix">+</span>
+          <span class="stat-number" data-count="8">0</span><span class="stat-suffix">+</span>
           <span class="stat-label">Projects Delivered</span>
         </div>
         <div class="stat-divider"></div>
@@ -106,7 +106,7 @@
             <div class="image-border"></div>
             <div class="image-dots"></div>
             <div class="experience-badge">
-              <span class="exp-number">5+</span>
+              <span class="exp-number">6+</span>
               <span class="exp-text">Years of Experience</span>
             </div>
           </div>
@@ -328,33 +328,64 @@
       <div class="projects-filter">
         <button class="filter-btn active" data-filter="all">All Projects</button>
         <button class="filter-btn" data-filter="aspnet">ASP.NET</button>
-        <button class="filter-btn" data-filter="angular">Angular</button>
         <button class="filter-btn" data-filter="php">PHP</button>
+        <button class="filter-btn" data-filter="angular">Angular</button>
+        <button class="filter-btn" data-filter="wix">Wix</button>
       </div>
       <div class="projects-grid">
 
+        <!-- Mehfilix -->
         <div class="project-card reveal-up" data-category="aspnet">
-          <div class="project-icon"><i class="fas fa-users"></i></div>
+          <div class="project-icon"><i class="fas fa-calendar"></i></div>
           <div class="project-content">
-            <h3>Alumni Community Portal</h3>
-            <p>A complete community management platform for alumni members to connect, communicate, and participate in events with real-time features.</p>
+            <h3>Mehfilix – Event Management Portal</h3>
+            <p>A modern admin dashboard for streamlined event administration with analytics, user management, and role-based navigation.</p>
             <div class="project-features">
-              <span>User Registration</span><span>Real-Time Chat</span><span>Events</span><span>Role-Based Access</span>
+              <span>Admin Dashboard</span><span>Event Mgmt</span><span>Analytics</span><span>Charts</span>
             </div>
             <div class="project-tech">
-              <span class="tech-badge">ASP.NET Core</span>
+              <span class="tech-badge">ASP.NET Core 9</span>
               <span class="tech-badge">EF Core</span>
               <span class="tech-badge">SQL Server</span>
-              <span class="tech-badge">SignalR</span>
+              <span class="tech-badge">Chart.js</span>
             </div>
           </div>
           <div class="project-overlay">
             <div class="overlay-content">
-              <h4>Alumni Community Portal</h4>
+              <h4>Mehfilix Features</h4>
+              <ul>
+                <li>Monthly &amp; Annual Statistics</li>
+                <li>Revenue &amp; Performance Charts</li>
+                <li>Task Progress Tracking</li>
+                <li>Notifications &amp; Alerts</li>
+                <li>Role-Based Navigation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alumni Community Portal -->
+        <div class="project-card reveal-up delay-1" data-category="aspnet">
+          <div class="project-icon secondary"><i class="fas fa-users"></i></div>
+          <div class="project-content">
+            <h3>Alumni Community Portal</h3>
+            <p>A secure community platform with registration, member approvals, events, posts, real-time chat, and role-based access control.</p>
+            <div class="project-features">
+              <span>Real-Time Chat</span><span>Events</span><span>RBAC</span><span>Email Verify</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-badge">ASP.NET Core</span>
+              <span class="tech-badge">EF Core</span>
+              <span class="tech-badge">SignalR</span>
+              <span class="tech-badge">SQL Server</span>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <div class="overlay-content">
+              <h4>Alumni Portal</h4>
               <ul>
                 <li>Member Approval System</li>
                 <li>Posts &amp; Comments</li>
-                <li>Email Verification</li>
                 <li>Real-Time Notifications</li>
                 <li>User Profiles &amp; RBAC</li>
               </ul>
@@ -362,11 +393,12 @@
           </div>
         </div>
 
-        <div class="project-card reveal-up delay-1" data-category="aspnet">
-          <div class="project-icon secondary"><i class="fas fa-building"></i></div>
+        <!-- HRMS -->
+        <div class="project-card reveal-up delay-2" data-category="aspnet">
+          <div class="project-icon accent"><i class="fas fa-building"></i></div>
           <div class="project-content">
             <h3>HR Management System</h3>
-            <p>A business application designed to automate HR operations including employee management, attendance, and recruitment workflows.</p>
+            <p>An enterprise HR solution for managing employees, attendance, leave requests, recruitment, and approval workflows.</p>
             <div class="project-features">
               <span>Employee Mgmt</span><span>Attendance</span><span>Leave</span><span>Recruitment</span>
             </div>
@@ -383,32 +415,33 @@
                 <li>Approval Workflow Engine</li>
                 <li>JWT Authentication</li>
                 <li>Reporting &amp; Analytics</li>
-                <li>Payroll Management</li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div class="project-card reveal-up delay-2" data-category="aspnet">
-          <div class="project-icon accent"><i class="fas fa-headset"></i></div>
+        <!-- Support Management -->
+        <div class="project-card reveal-up" data-category="aspnet">
+          <div class="project-icon"><i class="fas fa-headset"></i></div>
           <div class="project-content">
             <h3>Support Management System</h3>
-            <p>A ticket management platform for customer support with workflow management, status tracking, and email notifications.</p>
+            <p>A complete support ticketing system with enquiry management, ticket workflows, approvals, dashboards, reports, and email notifications.</p>
             <div class="project-features">
-              <span>Ticket System</span><span>Status Tracking</span><span>Email Notifs</span><span>Reports</span>
+              <span>Ticket Workflow</span><span>Approvals</span><span>Dashboard</span><span>Reports</span>
             </div>
             <div class="project-tech">
-              <span class="tech-badge">ASP.NET</span>
+              <span class="tech-badge">ASP.NET MVC</span>
               <span class="tech-badge">SQL Server</span>
             </div>
           </div>
         </div>
 
-        <div class="project-card reveal-up" data-category="aspnet">
-          <div class="project-icon"><i class="fas fa-network-wired"></i></div>
+        <!-- Corporate Portal API -->
+        <div class="project-card reveal-up delay-1" data-category="aspnet">
+          <div class="project-icon secondary"><i class="fas fa-network-wired"></i></div>
           <div class="project-content">
             <h3>Corporate Portal API</h3>
-            <p>Secure APIs supporting enterprise business applications with authentication, user management, and business module integrations.</p>
+            <p>Enterprise-grade REST APIs developed for secure business operations, user management, and system integrations.</p>
             <div class="project-features">
               <span>Authentication</span><span>User Mgmt</span><span>Business Modules</span><span>REST</span>
             </div>
@@ -419,13 +452,14 @@
           </div>
         </div>
 
-        <div class="project-card reveal-up delay-1" data-category="angular aspnet">
-          <div class="project-icon secondary"><i class="fas fa-map-marked-alt"></i></div>
+        <!-- Tour'D Pakistan -->
+        <div class="project-card reveal-up delay-2" data-category="angular aspnet">
+          <div class="project-icon accent"><i class="fas fa-map-marked-alt"></i></div>
           <div class="project-content">
             <h3>Tour'D Pakistan</h3>
-            <p>An online tourism booking platform with destination listings, hotel booking, agency management, and a responsive interface.</p>
+            <p>A tourism booking platform with destination listings, hotel management, travel agencies, and responsive user interfaces.</p>
             <div class="project-features">
-              <span>Destinations</span><span>Hotel Booking</span><span>Agency Mgmt</span><span>Categories</span>
+              <span>Destinations</span><span>Hotel Booking</span><span>Agency Mgmt</span><span>Angular SPA</span>
             </div>
             <div class="project-tech">
               <span class="tech-badge">Angular</span>
@@ -445,11 +479,75 @@
           </div>
         </div>
 
+        <!-- FinCore -->
+        <div class="project-card reveal-up" data-category="php">
+          <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
+          <div class="project-content">
+            <h3>FinCore Website</h3>
+            <p>A modern corporate website with a dynamic project portfolio management system, admin dashboard, and multiple image upload support.</p>
+            <div class="project-features">
+              <span>Portfolio Mgmt</span><span>Admin Dashboard</span><span>Image Upload</span><span>Categories</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-badge">PHP</span>
+              <span class="tech-badge">MySQL</span>
+              <span class="tech-badge">Bootstrap</span>
+              <span class="tech-badge">JavaScript</span>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <div class="overlay-content">
+              <h4>FinCore Features</h4>
+              <ul>
+                <li>Dynamic Project Portfolio</li>
+                <li>Client &amp; Location Details</li>
+                <li>Project Status Management</li>
+                <li>Responsive Design</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mesh Mavens -->
+        <div class="project-card reveal-up delay-1" data-category="php">
+          <div class="project-icon secondary"><i class="fas fa-globe"></i></div>
+          <div class="project-content">
+            <h3>Mesh Mavens Website</h3>
+            <p>A professional business website with clean modern UI, service listings, career opportunities, and SEO-friendly responsive layouts.</p>
+            <div class="project-features">
+              <span>Service Pages</span><span>Career Portal</span><span>Contact Forms</span><span>SEO-Friendly</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-badge">PHP</span>
+              <span class="tech-badge">Bootstrap</span>
+              <span class="tech-badge">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BeelineBeQuick -->
         <div class="project-card reveal-up delay-2" data-category="php">
-          <div class="project-icon accent"><i class="fas fa-calendar-check"></i></div>
+          <div class="project-icon accent"><i class="fas fa-bolt"></i></div>
+          <div class="project-content">
+            <h3>BeelineBeQuick Website</h3>
+            <p>A responsive business website with optimized performance, custom UI components, and a clean interface tailored to client branding.</p>
+            <div class="project-features">
+              <span>Custom UI</span><span>Contact Forms</span><span>Performance</span><span>Cross-Browser</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-badge">PHP</span>
+              <span class="tech-badge">Bootstrap</span>
+              <span class="tech-badge">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room Scheduling -->
+        <div class="project-card reveal-up" data-category="php">
+          <div class="project-icon"><i class="fas fa-calendar-check"></i></div>
           <div class="project-content">
             <h3>Room Scheduling System</h3>
-            <p>A web application for managing room reservations with booking calendar, conflict detection, and department management.</p>
+            <p>A web-based room reservation system with calendar scheduling, conflict prevention, and departmental booking management.</p>
             <div class="project-features">
               <span>Calendar View</span><span>Conflict Detection</span><span>Weekly Schedule</span><span>Dept. Mgmt</span>
             </div>
@@ -460,17 +558,65 @@
           </div>
         </div>
 
-        <div class="project-card reveal-up" data-category="php">
-          <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
+        <!-- KaprayVaghera E-Commerce -->
+        <div class="project-card reveal-up delay-1" data-category="php">
+          <div class="project-icon secondary"><i class="fas fa-shopping-cart"></i></div>
           <div class="project-content">
-            <h3>E-Commerce Website</h3>
-            <p>An online shopping platform with complete product management, shopping cart, wishlist, order management, and email notifications.</p>
+            <h3>KaprayVaghera E-Commerce</h3>
+            <p>An online shopping platform with complete product management, categories, shopping cart, wishlist, and order management.</p>
             <div class="project-features">
               <span>Product Catalog</span><span>Cart &amp; Wishlist</span><span>Orders</span><span>Email Notifs</span>
             </div>
             <div class="project-tech">
               <span class="tech-badge">PHP</span>
               <span class="tech-badge">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HCC Corporate Website -->
+        <div class="project-card reveal-up delay-2" data-category="wix">
+          <div class="project-icon accent"><i class="fas fa-landmark"></i></div>
+          <div class="project-content">
+            <h3>HCC Corporate Website</h3>
+            <p>A professional corporate website with custom components, modern layouts, animations, and dynamic content management.</p>
+            <div class="project-features">
+              <span>Responsive Layout</span><span>Custom Sections</span><span>Forms</span><span>Modern UI/UX</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-badge">Wix</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">CMS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gulmohar Education -->
+        <div class="project-card reveal-up" data-category="wix">
+          <div class="project-status-badge">In Progress</div>
+          <div class="project-icon"><i class="fas fa-school"></i></div>
+          <div class="project-content">
+            <h3>Gulmohar Education Website</h3>
+            <p>A dynamic educational website with events, announcements, newsletters, employment &amp; volunteer opportunities, and CMS-driven content.</p>
+            <div class="project-features">
+              <span>Dynamic Events</span><span>CMS Integration</span><span>Newsletter</span><span>Volunteer Portal</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-badge">Wix</span>
+              <span class="tech-badge">Velo</span>
+              <span class="tech-badge">CMS</span>
+              <span class="tech-badge">JavaScript</span>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <div class="overlay-content">
+              <h4>Gulmohar Features</h4>
+              <ul>
+                <li>Dynamic Events &amp; Announcements</li>
+                <li>Employment Opportunities</li>
+                <li>Newsletter Section</li>
+                <li>Responsive Design</li>
+              </ul>
             </div>
           </div>
         </div>
