@@ -977,7 +977,6 @@ section { padding: 100px 0; }
 .contact-details a:hover { color: var(--color-primary); }
 
 .contact-cta {
-  margin-top: 30px;
   grid-column: 1 / -1;
   padding: 20px 24px;
   background: rgba(124,58,237,0.06);
@@ -988,6 +987,7 @@ section { padding: 100px 0; }
   font-style: italic;
   line-height: 1.7;
   text-align: center;
+  margin-top: 30px;
 }
 
 .contact-form {
