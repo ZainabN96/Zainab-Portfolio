@@ -21,9 +21,9 @@ class Particle {
     this.vx    = (Math.random() - 0.5) * 0.38;
     this.vy    = (Math.random() - 0.5) * 0.38;
     this.size  = Math.random() * 1.8 + 0.4;
-    this.baseOpacity = Math.random() * 0.38 + 0.08;
+    this.baseOpacity = Math.random() * 0.55 + 0.15;
     this.opacity     = this.baseOpacity;
-    this.colorRgb    = Math.random() > 0.5 ? '139, 92, 246' : '6, 182, 212';
+    this.colorRgb    = Math.random() > 0.5 ? '124, 58, 237' : '8, 145, 178';
     this.pulse       = Math.random() * Math.PI * 2;
     this.pulseSpeed  = Math.random() * 0.018 + 0.008;
   }
@@ -55,12 +55,12 @@ function drawLines() {
       const dy = particles[i].y - particles[j].y;
       const dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < 115) {
-        const alpha = (1 - dist / 115) * 0.14;
+        const alpha = (1 - dist / 115) * 0.22;
         ctx.beginPath();
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(139, 92, 246, ${alpha})`;
-        ctx.lineWidth   = 0.5;
+        ctx.strokeStyle = `rgba(124, 58, 237, ${alpha})`;
+        ctx.lineWidth   = 0.6;
         ctx.stroke();
       }
     }
