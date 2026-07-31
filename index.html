@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zainab Naveed | Full-Stack Developer & Technical Trainer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-text">ZN</span><span class="logo-dot">.</span>
+      </a>
+      <div class="nav-menu" id="navMenu">
+        <a href="#home"       class="nav-link active">Home</a>
+        <a href="#about"      class="nav-link">About</a>
+        <a href="#skills"     class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects"   class="nav-link">Projects</a>
+        <a href="#services"   class="nav-link">Services</a>
+        <a href="#contact"    class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#contact" class="btn-hire">Hire Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <canvas id="particles"></canvas>
+    <div class="hero-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-content container">
+      <div class="hero-badge animate-fade-up">
+        <span class="badge-dot"></span>
+        Available for freelance &amp; full-time opportunities
+      </div>
+      <h1 class="hero-name animate-fade-up delay-1">
+        Zainab <span class="gradient-text">Naveed</span>
+      </h1>
+      <div class="hero-title animate-fade-up delay-2">
+        <span id="typedText"></span><span class="cursor">|</span>
+      </div>
+      <p class="hero-description animate-fade-up delay-3">
+        Building Modern Web Applications with Clean Code &amp; Innovative Solutions. Passionate about transforming ideas into powerful digital experiences.
+      </p>
+      <div class="hero-stats animate-fade-up delay-4">
+        <div class="stat-item">
+          <span class="stat-number" data-count="5">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="7">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Projects Delivered</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="10">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+      </div>
+      <div class="hero-buttons animate-fade-up delay-5">
+        <a href="#" class="btn-primary"><i class="fas fa-download"></i> Download CV</a>
+        <a href="#projects" class="btn-secondary"><i class="fas fa-eye"></i> View Projects</a>
+        <a href="#contact" class="btn-outline"><i class="fas fa-envelope"></i> Contact Me</a>
+      </div>
+      <div class="hero-socials animate-fade-up delay-6">
+        <a href="https://github.com/ZainabN96" class="social-link" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/zainabnaveed" class="social-link" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:zainabnaveed.hcc@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <a href="#about">
+        <div class="scroll-indicator"><div class="scroll-ball"></div></div>
+        <span>Scroll Down</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get To Know</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-image reveal-left">
+          <div class="image-wrapper">
+            <div class="profile-placeholder"><i class="fas fa-user"></i></div>
+            <div class="image-border"></div>
+            <div class="image-dots"></div>
+            <div class="experience-badge">
+              <span class="exp-number">5+</span>
+              <span class="exp-text">Years of Experience</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text reveal-right">
+          <h3>Full-Stack Developer &amp; <span class="gradient-text">Technical Trainer</span></h3>
+          <p>Hello! I'm <strong>Zainab Naveed</strong>, a passionate Full-Stack Developer and Technical Trainer who enjoys building secure, scalable, and user-friendly web applications.</p>
+          <p>Over the years, I have worked on enterprise software solutions, HR management systems, support portals, community platforms, booking systems, e-commerce websites, and business automation applications.</p>
+          <p>Alongside development, I have trained beginners and professionals in modern web technologies, helping them build practical skills through real-world projects. I believe technology should solve problems efficiently while delivering an excellent user experience.</p>
+          <div class="about-highlights">
+            <div class="highlight-item"><i class="fas fa-check-circle"></i><span>Enterprise Web Applications</span></div>
+            <div class="highlight-item"><i class="fas fa-check-circle"></i><span>ASP.NET Core Development</span></div>
+            <div class="highlight-item"><i class="fas fa-check-circle"></i><span>Angular Development</span></div>
+            <div class="highlight-item"><i class="fas fa-check-circle"></i><span>REST API Development</span></div>
+            <div class="highlight-item"><i class="fas fa-check-circle"></i><span>SQL Server &amp; MySQL</span></div>
+            <div class="highlight-item"><i class="fas fa-check-circle"></i><span>Technical Training</span></div>
+          </div>
+          <div class="about-info">
+            <div class="info-item"><i class="fas fa-envelope"></i><span>zainabnaveed.hcc@gmail.com</span></div>
+            <div class="info-item"><i class="fas fa-map-marker-alt"></i><span>Pakistan</span></div>
+            <div class="info-item"><i class="fas fa-graduation-cap"></i><span>BS Software Engineering — Virtual University of Pakistan</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Arsenal</span>
+        <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-category reveal-up">
+          <div class="category-header">
+            <div class="category-icon"><i class="fas fa-palette"></i></div>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">HTML5 / CSS3</span><span class="skill-percent">95%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">JavaScript</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">Angular</span><span class="skill-percent">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">Bootstrap</span><span class="skill-percent">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">Responsive Design</span><span class="skill-percent">92%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up delay-1">
+          <div class="category-header">
+            <div class="category-icon backend"><i class="fas fa-server"></i></div>
+            <h3>Backend</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">ASP.NET Core</span><span class="skill-percent">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">ASP.NET MVC</span><span class="skill-percent">88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">.NET Web API</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">PHP</span><span class="skill-percent">75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up delay-2">
+          <div class="category-header">
+            <div class="category-icon database"><i class="fas fa-database"></i></div>
+            <h3>Databases</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">SQL Server</span><span class="skill-percent">88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">MySQL</span><span class="skill-percent">82%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">Entity Framework Core</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up delay-3">
+          <div class="category-header">
+            <div class="category-icon tools"><i class="fas fa-tools"></i></div>
+            <h3>Tools &amp; Technologies</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Visual Studio</span>
+            <span class="skill-tag">Git &amp; GitHub</span>
+            <span class="skill-tag">IIS</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">JWT Auth</span>
+            <span class="skill-tag">SignalR</span>
+            <span class="skill-tag">Mail Integration</span>
+            <span class="skill-tag">Wix</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Journey</span>
+        <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Senior Full-Stack Developer</h3>
+              <span class="timeline-company">HCC Technology Foundation</span>
+              <span class="timeline-period"><i class="fas fa-circle"></i> Current</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Develop enterprise-level web applications using Microsoft technologies</li>
+              <li>Design and maintain SQL Server databases and data models</li>
+              <li>Build secure REST APIs with JWT authentication &amp; authorization</li>
+              <li>Create responsive, accessible user interfaces</li>
+              <li>Optimize application performance and resolve technical issues</li>
+              <li>Collaborate with development teams on project planning &amp; implementation</li>
+            </ul>
+            <div class="timeline-tech">
+              <span>ASP.NET Core</span><span>Angular</span><span>SQL Server</span><span>REST APIs</span><span>JWT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up delay-1">
+          <div class="timeline-dot secondary"><i class="fas fa-code"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Associate Technical Consultant</h3>
+              <span class="timeline-company">HCC-ME</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Requirement analysis and full-cycle software development</li>
+              <li>API integrations and robust database design</li>
+              <li>Client support, technical consultation, and documentation</li>
+            </ul>
+            <div class="timeline-tech">
+              <span>.NET</span><span>SQL Server</span><span>API Integration</span><span>Documentation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up delay-2">
+          <div class="timeline-dot accent"><i class="fas fa-chalkboard-teacher"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Lead Technical Trainer</h3>
+              <span class="timeline-company">Independent / Freelance</span>
+            </div>
+            <p>Delivering practical, hands-on technical training for students and professionals through real-world projects.</p>
+            <div class="courses-grid">
+              <span class="course-tag">HTML &amp; CSS</span>
+              <span class="course-tag">Bootstrap</span>
+              <span class="course-tag">JavaScript</span>
+              <span class="course-tag">Angular</span>
+              <span class="course-tag">Python</span>
+              <span class="course-tag">Shopify</span>
+              <span class="course-tag">WordPress</span>
+              <span class="course-tag">Canva AI</span>
+              <span class="course-tag">Video Editing</span>
+              <span class="course-tag">Software Dev Fundamentals</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Work</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="aspnet">ASP.NET</button>
+        <button class="filter-btn" data-filter="angular">Angular</button>
+        <button class="filter-btn" data-filter="php">PHP</button>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal-up" data-category="aspnet">
+          <div class="project-icon"><i class="fas fa-users"></i></div>
+          <div class="project-content">
+            <h3>Alumni Community Portal</h3>
+            <p>A complete community management platform for alumni members to connect, communicate, and participate in events with real-time features.</p>
+            <div class="project-features">
+              <span>User Registration</span><span>Real-Time Chat</span><span>Events</span><span>Role-Based Access</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-badge">ASP.NET Core</span>
+              <span class="tech-badge">EF Core</span>
+              <span class="tech-badge">SQL Server</span>
+              <span class="tech-badge">SignalR</span>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <div class="overlay-content">
+              <h4>Alumni Community Portal</h4>
+              <ul>
+                <li>Member Approval System</li>
+                <li>Posts &amp; Comments</li>
+                <li>Email Verification</li>
+                <li>Real-Time Notifications</li>
+                <li>User Profiles &amp; RBAC</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up delay-1" data-category="aspnet">
+          <div class="project-icon secondary"><i class="fas fa-building"></i></div>
+          <div class="project-content">
+            <h3>HR Management System</h3>
+            <p>A business application designed to automate HR operations including employee management, attendance, and recruitment workflows.</p>
+            <div class="project-features">
+              <span>Employee Mgmt</span><span>Attendance</span><span>Leave</span><span>Recruitment</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-badge">ASP.NET Core</span>
+              <span class="tech-badge">SQL Server</span>
+              <span class="tech-badge">JWT Auth</span>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <div class="overlay-content">
+              <h4>HRMS Features</h4>
+              <ul>
+                <li>Approval Workflow Engine</li>
+                <li>JWT Authentication</li>
+                <li>Reporting &amp; Analytics</li>
+                <li>Payroll Management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up delay-2" data-category="aspnet">
+          <div class="project-icon accent"><i class="fas fa-headset"></i></div>
+          <div class="project-content">
+            <h3>Support Management System</h3>
+            <p>A ticket management platform for customer support with workflow management, status tracking, and email notifications.</p>
+            <div class="project-features">
+              <span>Ticket System</span><span>Status Tracking</span><span>Email Notifs</span><span>Reports</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-badge">ASP.NET</span>
+              <span class="tech-badge">SQL Server</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-category="aspnet">
+          <div class="project-icon"><i class="fas fa-network-wired"></i></div>
+          <div class="project-content">
+            <h3>Corporate Portal API</h3>
+            <p>Secure APIs supporting enterprise business applications with authentication, user management, and business module integrations.</p>
+            <div class="project-features">
+              <span>Authentication</span><span>User Mgmt</span><span>Business Modules</span><span>REST</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-badge">.NET 8</span>
+              <span class="tech-badge">SQL Server</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up delay-1" data-category="angular aspnet">
+          <div class="project-icon secondary"><i class="fas fa-map-marked-alt"></i></div>
+          <div class="project-content">
+            <h3>Tour'D Pakistan</h3>
+            <p>An online tourism booking platform with destination listings, hotel booking, agency management, and a responsive interface.</p>
+            <div class="project-features">
+              <span>Destinations</span><span>Hotel Booking</span><span>Agency Mgmt</span><span>Categories</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-badge">Angular</span>
+              <span class="tech-badge">ASP.NET Core</span>
+              <span class="tech-badge">SQL Server</span>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <div class="overlay-content">
+              <h4>Tourism Platform</h4>
+              <ul>
+                <li>Full booking management</li>
+                <li>Angular SPA frontend</li>
+                <li>Responsive for all devices</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up delay-2" data-category="php">
+          <div class="project-icon accent"><i class="fas fa-calendar-check"></i></div>
+          <div class="project-content">
+            <h3>Room Scheduling System</h3>
+            <p>A web application for managing room reservations with booking calendar, conflict detection, and department management.</p>
+            <div class="project-features">
+              <span>Calendar View</span><span>Conflict Detection</span><span>Weekly Schedule</span><span>Dept. Mgmt</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-badge">PHP</span>
+              <span class="tech-badge">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-category="php">
+          <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
+          <div class="project-content">
+            <h3>E-Commerce Website</h3>
+            <p>An online shopping platform with complete product management, shopping cart, wishlist, order management, and email notifications.</p>
+            <div class="project-features">
+              <span>Product Catalog</span><span>Cart &amp; Wishlist</span><span>Orders</span><span>Email Notifs</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-badge">PHP</span>
+              <span class="tech-badge">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EDUCATION ===================== -->
+  <section class="education" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Academic Background</span>
+        <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="education-card reveal-up">
+        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="edu-content">
+          <h3>Bachelor of Science in Software Engineering</h3>
+          <span class="edu-institution">Virtual University of Pakistan</span>
+          <p>Comprehensive study in software engineering principles, web development, database management, software architecture, algorithms, and project management methodologies.</p>
+        </div>
+        <div class="edu-badge">
+          <i class="fas fa-award"></i>
+          <span>BS Degree</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I Offer</span>
+        <h2 class="section-title">My <span class="gradient-text">Services</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal-up">
+          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Full-Stack Web Development</h3>
+          <p>Complete web applications from frontend to backend with modern, scalable technologies.</p>
+        </div>
+        <div class="service-card reveal-up delay-1">
+          <div class="service-icon secondary"><i class="fas fa-cogs"></i></div>
+          <h3>Custom Software Development</h3>
+          <p>Tailored software solutions designed to meet your specific business requirements.</p>
+        </div>
+        <div class="service-card reveal-up delay-2">
+          <div class="service-icon accent"><i class="fas fa-plug"></i></div>
+          <h3>REST API Development</h3>
+          <p>Secure and scalable API development with proper authentication and clear documentation.</p>
+        </div>
+        <div class="service-card reveal-up">
+          <div class="service-icon"><i class="fas fa-database"></i></div>
+          <h3>Database Design</h3>
+          <p>Optimized database architecture and design for SQL Server and MySQL environments.</p>
+        </div>
+        <div class="service-card reveal-up delay-1">
+          <div class="service-icon secondary"><i class="fas fa-sitemap"></i></div>
+          <h3>Enterprise Applications</h3>
+          <p>Large-scale business applications with complex workflows and third-party integrations.</p>
+        </div>
+        <div class="service-card reveal-up delay-2">
+          <div class="service-icon accent"><i class="fas fa-users-cog"></i></div>
+          <h3>HRMS Development</h3>
+          <p>Complete HR management systems for employee management and business operations.</p>
+        </div>
+        <div class="service-card reveal-up">
+          <div class="service-icon"><i class="fas fa-tachometer-alt"></i></div>
+          <h3>Admin Dashboard Development</h3>
+          <p>Professional admin panels with analytics, reporting, and advanced management features.</p>
+        </div>
+        <div class="service-card reveal-up delay-1">
+          <div class="service-icon secondary"><i class="fas fa-chalkboard-teacher"></i></div>
+          <h3>Technical Training</h3>
+          <p>Practical, hands-on training sessions for beginners up to advanced developers.</p>
+        </div>
+        <div class="service-card reveal-up delay-2">
+          <div class="service-icon accent"><i class="fas fa-wrench"></i></div>
+          <h3>Bug Fixing &amp; Optimization</h3>
+          <p>Performance optimization and bug resolution for existing web applications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHY ME ===================== -->
+  <section class="why-me">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Values</span>
+        <h2 class="section-title">Why Work <span class="gradient-text">With Me?</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="why-grid">
+        <div class="why-item reveal-up">          <i class="fas fa-code"></i><span>Professional Coding Standards</span></div>
+        <div class="why-item reveal-up delay-1">  <i class="fas fa-layer-group"></i><span>Clean Architecture</span></div>
+        <div class="why-item reveal-up delay-2">  <i class="fas fa-mobile-alt"></i><span>Responsive Design</span></div>
+        <div class="why-item reveal-up">          <i class="fas fa-shield-alt"></i><span>Secure Applications</span></div>
+        <div class="why-item reveal-up delay-1">  <i class="fas fa-expand-arrows-alt"></i><span>Scalable Solutions</span></div>
+        <div class="why-item reveal-up delay-2">  <i class="fas fa-puzzle-piece"></i><span>Strong Problem Solving</span></div>
+        <div class="why-item reveal-up">          <i class="fas fa-clock"></i><span>Timely Delivery</span></div>
+        <div class="why-item reveal-up delay-1">  <i class="fas fa-comments"></i><span>Excellent Communication</span></div>
+        <div class="why-item reveal-up delay-2">  <i class="fas fa-sync-alt"></i><span>Continuous Learning</span></div>
+        <div class="why-item reveal-up">          <i class="fas fa-heart"></i><span>Client-Focused Approach</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's Build Something <span class="gradient-text">Amazing</span></h2>
+        <div class="section-line"></div>
+        <p class="section-desc">Whether you need a business application, modern website, REST API, or technical consultation — I'd love to help bring your ideas to life.</p>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info reveal-left">
+          <div class="contact-card">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <a href="mailto:zainabnaveed.hcc@gmail.com">zainabnaveed.hcc@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon secondary"><i class="fab fa-linkedin"></i></div>
+              <div class="contact-details">
+                <h4>LinkedIn</h4>
+                <a href="https://linkedin.com/in/zainabnaveed" target="_blank">linkedin.com/in/zainabnaveed</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon accent"><i class="fab fa-github"></i></div>
+              <div class="contact-details">
+                <h4>GitHub</h4>
+                <a href="https://github.com/ZainabN96" target="_blank">github.com/ZainabN96</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <span>Pakistan</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-cta">
+            <p>"Let's work together to create reliable, scalable, and impactful software solutions."</p>
+          </div>
+        </div>
+        <div class="contact-form-wrapper reveal-right">
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Your Full Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder="Your Email Address" required>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" placeholder="Subject / Project Type" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" placeholder="Tell me about your project..." rows="6" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-text">ZN</span><span class="logo-dot">.</span>
+        </div>
+        <p>Building reliable, scalable, and impactful software solutions.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/ZainabN96" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/zainabnaveed" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:zainabnaveed.hcc@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="footer-copy">&copy; 2025 Zainab Naveed. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
