@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV – Zainab Naveed</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ── Print trigger bar (hidden when printing) ── */
+    .print-bar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      background: #7c3aed; color: #fff;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 32px; font-family: 'Inter', sans-serif;
+      font-size: 0.875rem; box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+    }
+    .print-bar span { opacity: 0.85; }
+    .print-btn {
+      background: #fff; color: #7c3aed;
+      border: none; border-radius: 6px;
+      padding: 8px 22px; font-weight: 700;
+      font-size: 0.875rem; cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: opacity 0.2s;
+    }
+    .print-btn:hover { opacity: 0.88; }
+    .back-btn {
+      color: rgba(255,255,255,0.85); text-decoration: none;
+      font-weight: 500; display: flex; align-items: center; gap: 6px;
+    }
+    .back-btn:hover { color: #fff; }
+
+    /* ── Page setup ── */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 14px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1e1b4b;
+      background: #f0eeff;
+      padding: 50px 0 40px;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      background: #fff;
+      margin: 0 auto;
+      padding: 14mm 16mm 14mm 16mm;
+      box-shadow: 0 4px 40px rgba(124,58,237,0.12);
+    }
+
+    /* ── Header ── */
+    .cv-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 14px;
+      border-bottom: 3px solid #7c3aed;
+      margin-bottom: 18px;
+    }
+    .cv-name { font-size: 2rem; font-weight: 800; color: #1e1b4b; line-height: 1.1; }
+    .cv-title {
+      font-size: 0.9rem; font-weight: 600; color: #7c3aed;
+      margin-top: 5px; letter-spacing: 0.3px;
+    }
+    .cv-contact {
+      text-align: right; display: flex;
+      flex-direction: column; gap: 5px;
+    }
+    .cv-contact a, .cv-contact span {
+      font-size: 0.78rem; color: #4c4a6d;
+      text-decoration: none; display: flex;
+      align-items: center; justify-content: flex-end; gap: 5px;
+    }
+    .cv-contact a:hover { color: #7c3aed; }
+    .cv-contact svg { width: 12px; height: 12px; flex-shrink: 0; color: #7c3aed; }
+
+    /* ── Layout ── */
+    .cv-body { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; }
+
+    /* ── Section titles ── */
+    .section-title {
+      font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1.8px;
+      color: #7c3aed; margin-bottom: 10px;
+      padding-bottom: 4px;
+      border-bottom: 1.5px solid rgba(124,58,237,0.2);
+    }
+
+    .cv-section { margin-bottom: 16px; }
+
+    /* ── Skills ── */
+    .skill-group { margin-bottom: 10px; }
+    .skill-group-title { font-size: 0.72rem; font-weight: 700; color: #1e1b4b; margin-bottom: 5px; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .skill-tag {
+      font-size: 0.68rem; padding: 3px 8px;
+      background: rgba(124,58,237,0.08);
+      border: 1px solid rgba(124,58,237,0.2);
+      border-radius: 4px; color: #4c4a6d; font-weight: 500;
+    }
+
+    /* ── Summary ── */
+    .summary-text {
+      font-size: 0.8rem; color: #4c4a6d;
+      line-height: 1.65;
+    }
+
+    /* ── Experience ── */
+    .exp-item { margin-bottom: 13px; }
+    .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 3px; }
+    .exp-role { font-size: 0.85rem; font-weight: 700; color: #1e1b4b; }
+    .exp-date { font-size: 0.7rem; color: #7c3aed; font-weight: 600; white-space: nowrap; }
+    .exp-company { font-size: 0.75rem; color: #7c3aed; font-weight: 600; margin-bottom: 5px; }
+    .exp-list { padding-left: 12px; }
+    .exp-list li {
+      font-size: 0.76rem; color: #4c4a6d;
+      margin-bottom: 2px; line-height: 1.5;
+      list-style: none; position: relative; padding-left: 10px;
+    }
+    .exp-list li::before { content: '▸'; position: absolute; left: 0; color: #7c3aed; font-size: 0.65rem; top: 1px; }
+
+    /* ── Projects ── */
+    .proj-item { margin-bottom: 10px; }
+    .proj-name { font-size: 0.8rem; font-weight: 700; color: #1e1b4b; }
+    .proj-tech { font-size: 0.68rem; color: #7c3aed; font-weight: 600; margin-bottom: 2px; }
+    .proj-desc { font-size: 0.73rem; color: #4c4a6d; line-height: 1.5; }
+
+    /* ── Education ── */
+    .edu-degree { font-size: 0.82rem; font-weight: 700; color: #1e1b4b; }
+    .edu-inst { font-size: 0.75rem; color: #7c3aed; font-weight: 600; margin-top: 2px; }
+
+    /* ── Courses ── */
+    .course-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .course-tag {
+      font-size: 0.66rem; padding: 2px 7px;
+      background: rgba(8,145,178,0.08);
+      border: 1px solid rgba(8,145,178,0.2);
+      border-radius: 4px; color: #0891b2; font-weight: 500;
+    }
+
+    /* ── Divider ── */
+    hr { border: none; border-top: 1px solid rgba(124,58,237,0.12); margin: 10px 0; }
+
+    /* ── Print styles ── */
+    @media print {
+      .print-bar { display: none !important; }
+      body { background: #fff; padding: 0; }
+      .page { box-shadow: none; margin: 0; width: 100%; }
+      a { color: inherit; }
+      @page { margin: 10mm 12mm; size: A4; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print bar -->
+  <div class="print-bar">
+    <a href="index.html" class="back-btn">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      Back to Portfolio
+    </a>
+    <span>To save as PDF: File → Print → Save as PDF</span>
+    <button class="print-btn" onclick="window.print()">⬇ Download PDF</button>
+  </div>
+
+  <!-- CV Page -->
+  <div class="page">
+
+    <!-- Header -->
+    <div class="cv-header">
+      <div>
+        <div class="cv-name">Zainab Naveed</div>
+        <div class="cv-title">Senior Full-Stack Developer &nbsp;|&nbsp; ASP.NET Core &nbsp;|&nbsp; Angular &nbsp;|&nbsp; PHP</div>
+      </div>
+      <div class="cv-contact">
+        <a href="mailto:zainabnaveed2512@gmail.com">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          zainabnaveed2512@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/zainabnaveed096" target="_blank">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.27h-3v-5.5c0-1.32-.03-3-1.83-3-1.83 0-2.11 1.43-2.11 2.91v5.59h-3v-10h2.88v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v5.6z"/></svg>
+          linkedin.com/in/zainabnaveed096
+        </a>
+        <a href="https://github.com/ZainabN96" target="_blank">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.165c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.218.694.825.576C20.565 21.796 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          github.com/ZainabN96
+        </a>
+        <span>
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Pakistan
+        </span>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="cv-body">
+
+      <!-- LEFT COLUMN -->
+      <div class="cv-left">
+
+        <!-- Summary -->
+        <div class="cv-section">
+          <div class="section-title">Profile</div>
+          <p class="summary-text">
+            Passionate Full-Stack Developer and Technical Trainer with 6+ years of experience building secure, scalable, and user-friendly enterprise web applications. Skilled in ASP.NET Core, Angular, PHP, and REST API development. Experienced in mentoring aspiring developers through real-world training programs.
+          </p>
+        </div>
+
+        <!-- Skills -->
+        <div class="cv-section">
+          <div class="section-title">Technical Skills</div>
+
+          <div class="skill-group">
+            <div class="skill-group-title">Frontend</div>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Angular</span>
+              <span class="skill-tag">Bootstrap</span>
+              <span class="skill-tag">Responsive Design</span>
+              <span class="skill-tag">Wix / Velo</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title">Backend</div>
+            <div class="skill-tags">
+              <span class="skill-tag">ASP.NET Core</span>
+              <span class="skill-tag">ASP.NET MVC</span>
+              <span class="skill-tag">.NET Web API</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">C#</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title">Databases</div>
+            <div class="skill-tags">
+              <span class="skill-tag">SQL Server</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">EF Core</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title">Tools & Technologies</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Visual Studio</span>
+              <span class="skill-tag">Git & GitHub</span>
+              <span class="skill-tag">IIS</span>
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">JWT Auth</span>
+              <span class="skill-tag">SignalR</span>
+              <span class="skill-tag">Mail Integration</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="cv-section">
+          <div class="section-title">Education</div>
+          <div class="edu-degree">BS Software Engineering</div>
+          <div class="edu-inst">Virtual University of Pakistan</div>
+        </div>
+
+        <!-- Training Courses -->
+        <div class="cv-section">
+          <div class="section-title">Courses Delivered</div>
+          <div class="course-tags">
+            <span class="course-tag">HTML & CSS</span>
+            <span class="course-tag">Bootstrap</span>
+            <span class="course-tag">JavaScript</span>
+            <span class="course-tag">Angular</span>
+            <span class="course-tag">Python</span>
+            <span class="course-tag">Shopify</span>
+            <span class="course-tag">WordPress</span>
+            <span class="course-tag">PHP</span>
+            <span class="course-tag">C#</span>
+            <span class="course-tag">Asp.net MVC</span>
+          </div>
+        </div>
+
+        <!-- Key Strengths -->
+        <div class="cv-section">
+          <div class="section-title">Key Strengths</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Clean Architecture</span>
+            <span class="skill-tag">Secure Code</span>
+            <span class="skill-tag">Scalable Solutions</span>
+            <span class="skill-tag">Timely Delivery</span>
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Team Collaboration</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="cv-right">
+
+        <!-- Experience -->
+        <div class="cv-section">
+          <div class="section-title">Professional Experience</div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-role">Senior Full-Stack Developer</div>
+              <div class="exp-date">Current</div>
+            </div>
+            <div class="exp-company">HCC Technology Foundation</div>
+            <ul class="exp-list">
+              <li>Develop enterprise-level web applications using Microsoft technologies</li>
+              <li>Design and maintain SQL Server databases and data models</li>
+              <li>Build secure REST APIs with JWT authentication and authorization</li>
+              <li>Create responsive, accessible user interfaces</li>
+              <li>Optimize application performance and resolve technical issues</li>
+              <li>Collaborate with teams on project planning and implementation</li>
+            </ul>
+          </div>
+
+          <hr>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-role">Associate Technical Consultant</div>
+            </div>
+            <div class="exp-company">HCC-ME</div>
+            <ul class="exp-list">
+              <li>Requirement analysis and full-cycle software development</li>
+              <li>API integrations and robust database design</li>
+              <li>Client support, technical consultation, and documentation</li>
+            </ul>
+          </div>
+
+          <hr>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-role">Lead Technical Trainer</div>
+            </div>
+            <div class="exp-company">HTF</div>
+            <ul class="exp-list">
+              <li>Delivered beginner-to-advanced training in web development technologies</li>
+              <li>Guided students through real-world projects and practical exercises</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="cv-section">
+          <div class="section-title">Key Projects</div>
+
+          <div class="proj-item">
+            <div class="proj-name">Mehfilix – Event Management Portal</div>
+            <div class="proj-tech">ASP.NET Core 9 · EF Core · SQL Server · Chart.js</div>
+            <div class="proj-desc">Admin dashboard for event management with analytics, user management, revenue charts, and role-based navigation.</div>
+          </div>
+
+          <div class="proj-item">
+            <div class="proj-name">Alumni Community Portal</div>
+            <div class="proj-tech">ASP.NET Core · EF Core · SignalR · SQL Server</div>
+            <div class="proj-desc">Community platform with real-time chat, events, posts, member approvals, and role-based access control.</div>
+          </div>
+
+          <div class="proj-item">
+            <div class="proj-name">HR Management System (HRMS)</div>
+            <div class="proj-tech">ASP.NET Core · SQL Server · JWT Auth</div>
+            <div class="proj-desc">Enterprise HR solution for employee management, attendance, leave, recruitment, and approval workflows.</div>
+          </div>
+
+          <div class="proj-item">
+            <div class="proj-name">Support Management System</div>
+            <div class="proj-tech">ASP.NET MVC · SQL Server</div>
+            <div class="proj-desc">Ticketing platform with workflow management, approvals, dashboards, reports, and email notifications.</div>
+          </div>
+
+          <div class="proj-item">
+            <div class="proj-name">Tour'D Pakistan</div>
+            <div class="proj-tech">Angular · ASP.NET Core · SQL Server</div>
+            <div class="proj-desc">Tourism booking platform with destinations, hotel management, agencies, and responsive Angular SPA.</div>
+          </div>
+
+          <div class="proj-item">
+            <div class="proj-name">FinCore Website &nbsp;|&nbsp; Mesh Mavens &nbsp;|&nbsp; BeelineBeQuick</div>
+            <div class="proj-tech">PHP · MySQL · Bootstrap · JavaScript</div>
+            <div class="proj-desc">Corporate and business websites with admin dashboards, portfolio management, career portals, and contact forms.</div>
+          </div>
+
+          <div class="proj-item">
+            <div class="proj-name">HCC Corporate &amp; Gulmohar Education Websites</div>
+            <div class="proj-tech">Wix · Velo · CMS · JavaScript</div>
+            <div class="proj-desc">Professional websites with dynamic CMS content, events, newsletters, and modern responsive layouts.</div>
+          </div>
+
+          <div class="proj-item">
+            <div class="proj-name">KaprayVaghera E-Commerce &nbsp;|&nbsp; Room Scheduling System</div>
+            <div class="proj-tech">PHP · MySQL</div>
+            <div class="proj-desc">Online shopping platform with cart and orders; room reservation system with conflict detection and calendar.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div><!-- /cv-body -->
+
+  </div><!-- /page -->
+
+</body>
+</html>
