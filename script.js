@@ -260,6 +260,7 @@ updateShapes();
 ===================================================== */
 const contactForm = document.getElementById('contactForm');
 
+/*
 contactForm.addEventListener('submit', e => {
   e.preventDefault();
   const btn = contactForm.querySelector('.btn-submit');
@@ -282,6 +283,7 @@ contactForm.addEventListener('submit', e => {
     }, 3200);
   }, 1800);
 });
+*/
 
 /* =====================================================
    FLOATING HERO BADGE — subtle levitate

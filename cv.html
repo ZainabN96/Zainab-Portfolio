@@ -32,7 +32,7 @@
 
     /* ── Page setup ── */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { font-size: 14px; }
+    html { font-size: 13.5px; }
     body {
       font-family: 'Inter', sans-serif;
       color: #1e1b4b;
@@ -54,9 +54,9 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      padding-bottom: 10px;
+      padding-bottom: 7px;
       border-bottom: 3px solid #7c3aed;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
     .cv-name { font-size: 2rem; font-weight: 800; color: #1e1b4b; line-height: 1.1; }
     .cv-title {
@@ -146,9 +146,11 @@
     @media print {
       .print-bar { display: none !important; }
       body { background: #fff; padding: 0; }
-      .page { box-shadow: none; margin: 0; width: 100%; }
+      .page { box-shadow: none; margin: 0; width: 100%; min-height: 0; padding: 0; }
+      .cv-body { display: block; }
+      .cv-left, .cv-right { width: 100%; }
       a { color: inherit; }
-      @page { margin: 0; size: A4; }
+      @page { margin: 12mm 14mm; size: A4; }
     }
   </style>
 </head>
@@ -232,6 +234,8 @@
               <span class="skill-tag">.NET Web API</span>
               <span class="skill-tag">PHP</span>
               <span class="skill-tag">C#</span>
+              <span class="skill-tag">Laravel</span>
+              <span class="skill-tag">SAP</span>
             </div>
           </div>
 
@@ -241,6 +245,8 @@
               <span class="skill-tag">SQL Server</span>
               <span class="skill-tag">MySQL</span>
               <span class="skill-tag">EF Core</span>
+              <span class="skill-tag">SAP HANA</span>
+              <span class="skill-tag">Oracle</span>
             </div>
           </div>
 
@@ -254,6 +260,12 @@
               <span class="skill-tag">JWT Auth</span>
               <span class="skill-tag">SignalR</span>
               <span class="skill-tag">Mail Integration</span>
+              <span class="skill-tag">jQuery</span>
+              <span class="skill-tag">DataTables</span>
+              <span class="skill-tag">SweetAlert</span>
+              <span class="skill-tag">Chart.js</span>
+              <span class="skill-tag">Humanizer</span>
+              <span class="skill-tag">WordPress</span>
             </div>
           </div>
         </div>
@@ -279,6 +291,20 @@
             <span class="course-tag">PHP</span>
             <span class="course-tag">C#</span>
             <span class="course-tag">Asp.net MVC</span>
+            <span class="course-tag">Video Editing</span>
+            <span class="course-tag">Canva AI</span>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="cv-section">
+          <div class="section-title">Certifications</div>
+          <div class="skill-tags">
+            <span class="skill-tag">SAP Business One – HCC Technology Foundation</span>
+            <span class="skill-tag">Microsoft C#.NET – HCC Technology Foundation</span>
+            <span class="skill-tag">English &amp; Soft Business Skills – HCC Technology Foundation</span>
+            <span class="skill-tag">Artificial Intelligence using Python – DigiSkills</span>
+            <span class="skill-tag">Data Analytics &amp; Business Intelligence – DigiSkills</span>
           </div>
         </div>
 
@@ -292,6 +318,21 @@
             <span class="skill-tag">Timely Delivery</span>
             <span class="skill-tag">Problem Solving</span>
             <span class="skill-tag">Team Collaboration</span>
+            <span class="skill-tag">Analytical Skills</span>
+            <span class="skill-tag">Adaptability</span>
+          </div>
+        </div>
+
+        <!-- Languages & Interests -->
+        <div class="cv-section">
+          <div class="section-title">Languages &amp; Interests</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Urdu (Fluent)</span>
+            <span class="skill-tag">Punjabi (Fluent)</span>
+            <span class="skill-tag">English (Intermediate)</span>
+            <span class="skill-tag">Food Hunt</span>
+            <span class="skill-tag">Travelling</span>
+            <span class="skill-tag">Playing Games</span>
           </div>
         </div>
 
@@ -331,6 +372,7 @@
               <li>Requirement analysis and full-cycle software development</li>
               <li>API integrations and robust database design</li>
               <li>Client support, technical consultation, and documentation</li>
+              <li>SAP support &amp; data entry for a Dubai-based client; wrote SQL queries and stored procedures in SAP HANA</li>
             </ul>
           </div>
 
@@ -340,7 +382,7 @@
             <div class="exp-header">
               <div class="exp-role">Lead Technical Trainer</div>
             </div>
-            <div class="exp-company">HTF</div>
+            <div class="exp-company">HCC Technology Foundation</div>
             <ul class="exp-list">
               <li>Delivered beginner-to-advanced training in web development technologies</li>
               <li>Guided students through real-world projects and practical exercises</li>
@@ -383,7 +425,13 @@
           </div>
 
           <div class="proj-item">
-            <div class="proj-name">FinCore Website &nbsp;|&nbsp; Mesh Mavens &nbsp;|&nbsp; BeelineBeQuick &nbsp;|&nbsp; Brandsol</div>
+            <div class="proj-name">BeelineBeQuick – Courier Company Website</div>
+            <div class="proj-tech">PHP · MySQL · Bootstrap · JavaScript</div>
+            <div class="proj-desc">Courier company site (shipping, tracking, packing) with an admin panel supporting multiple admins and full service management.</div>
+          </div>
+
+          <div class="proj-item">
+            <div class="proj-name">FinCore Website &nbsp;|&nbsp; Mesh Mavens &nbsp;|&nbsp; Brandsol</div>
             <div class="proj-tech">PHP · MySQL · Bootstrap · JavaScript</div>
             <div class="proj-desc">Corporate and business client websites with admin dashboards, portfolio management, career portals, contact forms, and ongoing maintenance.</div>
           </div>
@@ -397,7 +445,7 @@
           <div class="proj-item">
             <div class="proj-name">KaprayVaghera E-Commerce &nbsp;|&nbsp; Room Scheduling System &nbsp;|&nbsp; E-Music (FYP)</div>
             <div class="proj-tech">PHP · MySQL · jQuery</div>
-            <div class="proj-desc">E-commerce cart &amp; orders; room reservation with conflict detection; subscription-based music streaming app with paid downloads.</div>
+            <div class="proj-desc">E-commerce cart &amp; orders; room reservation with conflict detection; royalty-free music platform with free/paid downloads and admin-approved orders.</div>
           </div>
 
         </div>
