@@ -649,6 +649,10 @@ section { padding: 100px 0; }
   border-color: var(--color-accent); color: var(--color-accent);
   box-shadow: 0 0 0 5px rgba(217,119,6,0.10), 0 4px 14px rgba(217,119,6,0.18);
 }
+.timeline-dot.success {
+  border-color: var(--color-success); color: var(--color-success);
+  box-shadow: 0 0 0 5px rgba(5,150,105,0.10), 0 4px 14px rgba(5,150,105,0.18);
+}
 
 /* card with colored left border */
 .timeline-content {
@@ -662,6 +666,7 @@ section { padding: 100px 0; }
 }
 .timeline-item:nth-child(2) .timeline-content { border-left-color: var(--color-secondary); }
 .timeline-item:nth-child(3) .timeline-content { border-left-color: var(--color-accent); }
+.timeline-item:nth-child(4) .timeline-content { border-left-color: var(--color-success); }
 
 .timeline-content:hover {
   box-shadow: 0 8px 32px rgba(124,58,237,0.13);
@@ -671,6 +676,7 @@ section { padding: 100px 0; }
 }
 .timeline-item:nth-child(2) .timeline-content:hover { border-left-color: var(--color-secondary); }
 .timeline-item:nth-child(3) .timeline-content:hover { border-left-color: var(--color-accent); }
+.timeline-item:nth-child(4) .timeline-content:hover { border-left-color: var(--color-success); }
 
 .timeline-header {
   display: flex; flex-wrap: wrap; align-items: center;
@@ -695,6 +701,11 @@ section { padding: 100px 0; }
   color: var(--color-accent);
   background: rgba(217,119,6,0.08);
   border-color: rgba(217,119,6,0.18);
+}
+.timeline-item:nth-child(4) .timeline-company {
+  color: var(--color-success);
+  background: rgba(5,150,105,0.08);
+  border-color: rgba(5,150,105,0.18);
 }
 
 .timeline-period {

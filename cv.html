@@ -6,7 +6,6 @@
   <title>CV – Zainab Naveed</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* ── Print trigger bar (hidden when printing) ── */
     .print-bar {
       position: fixed; top: 0; left: 0; right: 0; z-index: 999;
       background: #7c3aed; color: #fff;
@@ -16,12 +15,9 @@
     }
     .print-bar span { opacity: 0.85; }
     .print-btn {
-      background: #fff; color: #7c3aed;
-      border: none; border-radius: 6px;
-      padding: 8px 22px; font-weight: 700;
-      font-size: 0.875rem; cursor: pointer;
-      font-family: 'Inter', sans-serif;
-      transition: opacity 0.2s;
+      background: #fff; color: #7c3aed; border: none; border-radius: 6px;
+      padding: 8px 22px; font-weight: 700; font-size: 0.875rem;
+      cursor: pointer; font-family: 'Inter', sans-serif;
     }
     .print-btn:hover { opacity: 0.88; }
     .back-btn {
@@ -30,156 +26,132 @@
     }
     .back-btn:hover { color: #fff; }
 
-    /* ── Page setup ── */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { font-size: 13.5px; }
+    html { font-size: 13px; }
     body {
       font-family: 'Inter', sans-serif;
-      color: #1e1b4b;
-      background: #f0eeff;
-      padding: 50px 0 40px;
+      color: #1e1b4b; background: #f0eeff;
+      padding: 52px 0 40px;
     }
-
     .page {
-      width: 210mm;
-      min-height: 297mm;
-      background: #fff;
-      margin: 0 auto;
-      padding: 11mm 16mm 11mm 16mm;
+      width: 210mm; min-height: 297mm;
+      background: #fff; margin: 0 auto;
+      padding: 10mm 14mm 10mm 14mm;
       box-shadow: 0 4px 40px rgba(124,58,237,0.12);
     }
 
     /* ── Header ── */
     .cv-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding-bottom: 7px;
-      border-bottom: 3px solid #7c3aed;
-      margin-bottom: 8px;
+      display: flex; justify-content: space-between; align-items: flex-start;
+      padding-bottom: 8px; border-bottom: 3px solid #7c3aed; margin-bottom: 10px;
     }
-    .cv-name { font-size: 2rem; font-weight: 800; color: #1e1b4b; line-height: 1.1; }
-    .cv-title {
-      font-size: 0.9rem; font-weight: 600; color: #7c3aed;
-      margin-top: 5px; letter-spacing: 0.3px;
-    }
-    .cv-contact {
-      text-align: right; display: flex;
-      flex-direction: column; gap: 5px;
-    }
+    .cv-name { font-size: 1.85rem; font-weight: 800; color: #1e1b4b; line-height: 1.1; }
+    .cv-tagline { font-size: 0.82rem; font-weight: 600; color: #7c3aed; margin-top: 4px; }
+    .cv-contact { text-align: right; display: flex; flex-direction: column; gap: 4px; }
     .cv-contact a, .cv-contact span {
-      font-size: 0.78rem; color: #4c4a6d;
-      text-decoration: none; display: flex;
-      align-items: center; justify-content: flex-end; gap: 5px;
+      font-size: 0.74rem; color: #4c4a6d; text-decoration: none;
+      display: flex; align-items: center; justify-content: flex-end; gap: 5px;
     }
     .cv-contact a:hover { color: #7c3aed; }
-    .cv-contact svg { width: 12px; height: 12px; flex-shrink: 0; color: #7c3aed; }
+    .cv-contact svg { width: 11px; height: 11px; flex-shrink: 0; color: #7c3aed; }
 
     /* ── Layout ── */
-    .cv-body { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; }
+    .cv-body { display: grid; grid-template-columns: 1fr 2.1fr; gap: 18px; }
 
     /* ── Section titles ── */
-    .section-title {
-      font-size: 0.72rem; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 1.8px;
-      color: #7c3aed; margin-bottom: 10px;
-      padding-bottom: 4px;
-      border-bottom: 1.5px solid rgba(124,58,237,0.2);
+    .sec-title {
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 1.8px; color: #7c3aed; margin-bottom: 7px;
+      padding-bottom: 3px; border-bottom: 1.5px solid rgba(124,58,237,0.2);
     }
-
-    .cv-section { margin-bottom: 11px; }
+    .cv-sec { margin-bottom: 10px; }
 
     /* ── Skills ── */
-    .skill-group { margin-bottom: 10px; }
-    .skill-group-title { font-size: 0.72rem; font-weight: 700; color: #1e1b4b; margin-bottom: 5px; }
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; }
-    .skill-tag {
-      font-size: 0.68rem; padding: 3px 8px;
-      background: rgba(124,58,237,0.08);
-      border: 1px solid rgba(124,58,237,0.2);
+    .skill-grp { margin-bottom: 7px; }
+    .skill-grp-title { font-size: 0.68rem; font-weight: 700; color: #1e1b4b; margin-bottom: 4px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 3px; }
+    .tag {
+      font-size: 0.63rem; padding: 2px 7px;
+      background: rgba(124,58,237,0.07); border: 1px solid rgba(124,58,237,0.18);
       border-radius: 4px; color: #4c4a6d; font-weight: 500;
     }
+    .tag.teal { background: rgba(8,145,178,0.07); border-color: rgba(8,145,178,0.18); color: #0891b2; }
+    .tag.amber { background: rgba(217,119,6,0.07); border-color: rgba(217,119,6,0.18); color: #b45309; }
 
     /* ── Summary ── */
-    .summary-text {
-      font-size: 0.8rem; color: #4c4a6d;
-      line-height: 1.65;
-    }
+    .summary { font-size: 0.76rem; color: #4c4a6d; line-height: 1.65; }
 
-    /* ── Experience ── */
-    .exp-item { margin-bottom: 9px; }
-    .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 3px; }
-    .exp-role { font-size: 0.85rem; font-weight: 700; color: #1e1b4b; }
-    .exp-date { font-size: 0.7rem; color: #7c3aed; font-weight: 600; white-space: nowrap; }
-    .exp-company { font-size: 0.75rem; color: #7c3aed; font-weight: 600; margin-bottom: 5px; }
-    .exp-list { padding-left: 12px; }
-    .exp-list li {
-      font-size: 0.76rem; color: #4c4a6d;
-      margin-bottom: 1px; line-height: 1.4;
-      list-style: none; position: relative; padding-left: 10px;
+    /* ── Experience / Training ── */
+    .exp-item { margin-bottom: 8px; }
+    .exp-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px; }
+    .exp-role { font-size: 0.8rem; font-weight: 700; color: #1e1b4b; }
+    .exp-date { font-size: 0.66rem; color: #7c3aed; font-weight: 600; white-space: nowrap; flex-shrink: 0; }
+    .exp-org { font-size: 0.71rem; color: #7c3aed; font-weight: 600; margin-bottom: 4px; }
+    .exp-loc { font-size: 0.66rem; color: #9796b0; }
+    .blist { list-style: none; padding: 0; }
+    .blist li {
+      font-size: 0.72rem; color: #4c4a6d; margin-bottom: 1px;
+      line-height: 1.45; position: relative; padding-left: 10px;
     }
-    .exp-list li::before { content: '▸'; position: absolute; left: 0; color: #7c3aed; font-size: 0.65rem; top: 1px; }
+    .blist li::before { content: '▸'; position: absolute; left: 0; color: #7c3aed; font-size: 0.6rem; top: 2px; }
 
     /* ── Projects ── */
-    .proj-item { margin-bottom: 7px; }
-    .proj-name { font-size: 0.8rem; font-weight: 700; color: #1e1b4b; }
-    .proj-tech { font-size: 0.68rem; color: #7c3aed; font-weight: 600; margin-bottom: 2px; }
-    .proj-desc { font-size: 0.73rem; color: #4c4a6d; line-height: 1.4; }
+    .proj { margin-bottom: 7px; }
+    .proj-name { font-size: 0.76rem; font-weight: 700; color: #1e1b4b; }
+    .proj-tech { font-size: 0.64rem; color: #7c3aed; font-weight: 600; margin-bottom: 1px; }
+    .proj-url { font-size: 0.63rem; color: #0891b2; margin-bottom: 2px; }
+    .proj-desc { font-size: 0.69rem; color: #4c4a6d; line-height: 1.45; }
 
-    /* ── Education ── */
-    .edu-degree { font-size: 0.82rem; font-weight: 700; color: #1e1b4b; }
-    .edu-inst { font-size: 0.75rem; color: #7c3aed; font-weight: 600; margin-top: 2px; }
+    /* ── Edu / Cert ── */
+    .edu-deg { font-size: 0.78rem; font-weight: 700; color: #1e1b4b; }
+    .edu-inst { font-size: 0.7rem; color: #7c3aed; font-weight: 600; }
+    .edu-date { font-size: 0.64rem; color: #9796b0; }
+    .edu-item { margin-bottom: 7px; }
 
-    /* ── Courses ── */
-    .course-tags { display: flex; flex-wrap: wrap; gap: 4px; }
-    .course-tag {
-      font-size: 0.66rem; padding: 2px 7px;
-      background: rgba(8,145,178,0.08);
-      border: 1px solid rgba(8,145,178,0.2);
-      border-radius: 4px; color: #0891b2; font-weight: 500;
-    }
+    .cert-item { margin-bottom: 5px; }
+    .cert-name { font-size: 0.72rem; font-weight: 600; color: #1e1b4b; }
+    .cert-org  { font-size: 0.66rem; color: #7c3aed; }
+    .cert-date { font-size: 0.63rem; color: #9796b0; }
 
-    /* ── Divider ── */
-    hr { border: none; border-top: 1px solid rgba(124,58,237,0.12); margin: 7px 0; }
+    hr { border: none; border-top: 1px solid rgba(124,58,237,0.10); margin: 6px 0; }
 
-    /* ── Print styles ── */
     @media print {
       .print-bar { display: none !important; }
       body { background: #fff; padding: 0; }
-      .page { box-shadow: none; margin: 0; width: 100%; min-height: 0; padding: 0; }
-      .cv-body { display: block; }
-      .cv-left, .cv-right { width: 100%; }
-      a { color: inherit; }
-      @page { margin: 12mm 14mm; size: A4; }
+      .page { box-shadow: none; margin: 0; width: 100%; min-height: 0; }
+      a { color: inherit !important; }
+      @page { margin: 8mm 10mm; size: A4; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Print bar -->
   <div class="print-bar">
     <a href="index.html" class="back-btn">
       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
       Back to Portfolio
     </a>
-    <span>To save as PDF: File → Print → Save as PDF</span>
+    <span>File → Print → Save as PDF</span>
     <button class="print-btn" onclick="window.print()">⬇ Download PDF</button>
   </div>
 
-  <!-- CV Page -->
   <div class="page">
 
-    <!-- Header -->
+    <!-- HEADER -->
     <div class="cv-header">
       <div>
         <div class="cv-name">Zainab Naveed</div>
-        <div class="cv-title">Senior Full-Stack Developer &nbsp;|&nbsp; ASP.NET Core &nbsp;|&nbsp; Angular &nbsp;|&nbsp; PHP</div>
+        <div class="cv-tagline">Full-Stack Developer &nbsp;|&nbsp; Assistant Manager Training &amp; Development &nbsp;|&nbsp; ASP.NET Core · Angular · PHP</div>
       </div>
       <div class="cv-contact">
         <a href="mailto:zainabnaveed2512@gmail.com">
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
           zainabnaveed2512@gmail.com
         </a>
+        <span>
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          +92 313 4100158
+        </span>
         <a href="https://linkedin.com/in/zainabnaveed096" target="_blank">
           <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.27h-3v-5.5c0-1.32-.03-3-1.83-3-1.83 0-2.11 1.43-2.11 2.91v5.59h-3v-10h2.88v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v5.6z"/></svg>
           linkedin.com/in/zainabnaveed096
@@ -190,268 +162,305 @@
         </a>
         <span>
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          Pakistan
+          Lahore, Punjab, Pakistan
         </span>
       </div>
     </div>
 
-    <!-- Body -->
+    <!-- BODY -->
     <div class="cv-body">
 
-      <!-- LEFT COLUMN -->
-      <div class="cv-left">
+      <!-- ═══ LEFT ═══ -->
+      <div>
 
-        <!-- Summary -->
-        <div class="cv-section">
-          <div class="section-title">Profile</div>
-          <p class="summary-text">
-            Passionate Full-Stack Developer and Technical Trainer with 6+ years of experience building secure, scalable, and user-friendly enterprise web applications. Skilled in ASP.NET Core, Angular, PHP, and REST API development. Experienced in mentoring aspiring developers through real-world training programs.
-          </p>
+        <!-- Profile -->
+        <div class="cv-sec">
+          <div class="sec-title">Profile</div>
+          <p class="summary">Full-Stack Developer and Assistant Manager Training &amp; Development with 3+ years at HCC Technology Foundation. Experienced in building enterprise web applications, REST APIs, and CMS-driven websites, while also designing and delivering technical training programs for beginners to intermediate learners.</p>
         </div>
 
         <!-- Skills -->
-        <div class="cv-section">
-          <div class="section-title">Technical Skills</div>
-
-          <div class="skill-group">
-            <div class="skill-group-title">Frontend</div>
-            <div class="skill-tags">
-              <span class="skill-tag">HTML5</span>
-              <span class="skill-tag">CSS3</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">Angular</span>
-              <span class="skill-tag">Bootstrap</span>
-              <span class="skill-tag">Responsive Design</span>
-              <span class="skill-tag">Wix / Velo</span>
+        <div class="cv-sec">
+          <div class="sec-title">Technical Skills</div>
+          <div class="skill-grp">
+            <div class="skill-grp-title">Frontend</div>
+            <div class="tags">
+              <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span>
+              <span class="tag">jQuery</span><span class="tag">Angular</span><span class="tag">Bootstrap</span>
+              <span class="tag">AJAX</span><span class="tag">DataTables</span>
             </div>
           </div>
-
-          <div class="skill-group">
-            <div class="skill-group-title">Backend</div>
-            <div class="skill-tags">
-              <span class="skill-tag">ASP.NET Core</span>
-              <span class="skill-tag">ASP.NET MVC</span>
-              <span class="skill-tag">.NET Web API</span>
-              <span class="skill-tag">PHP</span>
-              <span class="skill-tag">C#</span>
-              <span class="skill-tag">Laravel</span>
-              <span class="skill-tag">SAP</span>
+          <div class="skill-grp">
+            <div class="skill-grp-title">Backend</div>
+            <div class="tags">
+              <span class="tag">ASP.NET Core</span><span class="tag">ASP.NET MVC</span>
+              <span class="tag">C#</span><span class="tag">.NET Web API</span><span class="tag">PHP</span>
+              <span class="tag">EF Core</span><span class="tag">JWT</span><span class="tag">SignalR</span>
             </div>
           </div>
-
-          <div class="skill-group">
-            <div class="skill-group-title">Databases</div>
-            <div class="skill-tags">
-              <span class="skill-tag">SQL Server</span>
-              <span class="skill-tag">MySQL</span>
-              <span class="skill-tag">EF Core</span>
-              <span class="skill-tag">SAP HANA</span>
-              <span class="skill-tag">Oracle</span>
+          <div class="skill-grp">
+            <div class="skill-grp-title">Databases</div>
+            <div class="tags">
+              <span class="tag">SQL Server</span><span class="tag">MySQL</span><span class="tag">SAP HANA</span>
             </div>
           </div>
-
-          <div class="skill-group">
-            <div class="skill-group-title">Tools & Technologies</div>
-            <div class="skill-tags">
-              <span class="skill-tag">Visual Studio</span>
-              <span class="skill-tag">Git & GitHub</span>
-              <span class="skill-tag">IIS</span>
-              <span class="skill-tag">Postman</span>
-              <span class="skill-tag">JWT Auth</span>
-              <span class="skill-tag">SignalR</span>
-              <span class="skill-tag">Mail Integration</span>
-              <span class="skill-tag">jQuery</span>
-              <span class="skill-tag">DataTables</span>
-              <span class="skill-tag">SweetAlert</span>
-              <span class="skill-tag">Chart.js</span>
-              <span class="skill-tag">Humanizer</span>
-              <span class="skill-tag">WordPress</span>
+          <div class="skill-grp">
+            <div class="skill-grp-title">Tools &amp; Platforms</div>
+            <div class="tags">
+              <span class="tag">Wix / Velo</span><span class="tag">WordPress</span><span class="tag">Git</span>
+              <span class="tag">Postman</span><span class="tag">IIS</span><span class="tag">Chart.js</span>
+              <span class="tag">Cloudinary</span><span class="tag">MailKit</span>
             </div>
           </div>
         </div>
 
         <!-- Education -->
-        <div class="cv-section">
-          <div class="section-title">Education</div>
-          <div class="edu-degree">BS Software Engineering</div>
-          <div class="edu-inst">Virtual University of Pakistan</div>
+        <div class="cv-sec">
+          <div class="sec-title">Education</div>
+          <div class="edu-item">
+            <div class="edu-deg">BS Software Engineering</div>
+            <div class="edu-inst">Virtual University of Pakistan</div>
+            <div class="edu-date">2015 – 2020 &nbsp;|&nbsp; Lahore</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-deg">ICS (Intermediate)</div>
+            <div class="edu-inst">Leadership College Network (LCN)</div>
+            <div class="edu-date">2013 – 2015 &nbsp;|&nbsp; Lahore</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-deg">Matriculation</div>
+            <div class="edu-inst">The Educators Sahar Campus 2</div>
+            <div class="edu-date">2011 – 2013 &nbsp;|&nbsp; Lahore</div>
+          </div>
         </div>
 
-        <!-- Training Courses -->
-        <div class="cv-section">
-          <div class="section-title">Courses Delivered</div>
-          <div class="course-tags">
-            <span class="course-tag">HTML & CSS</span>
-            <span class="course-tag">Bootstrap</span>
-            <span class="course-tag">JavaScript</span>
-            <span class="course-tag">Angular</span>
-            <span class="course-tag">Python</span>
-            <span class="course-tag">Shopify</span>
-            <span class="course-tag">WordPress</span>
-            <span class="course-tag">PHP</span>
-            <span class="course-tag">C#</span>
-            <span class="course-tag">Asp.net MVC</span>
+        <!-- Training -->
+        <div class="cv-sec">
+          <div class="sec-title">Professional Training</div>
+          <div class="edu-item">
+            <div class="edu-deg">Technical Training</div>
+            <div class="edu-inst">E-Rozgaar – UET Lahore</div>
+            <div class="edu-date">Jan 2022 – Mar 2022</div>
+            <div class="edu-date" style="color:#4c4a6d;margin-top:2px;">HTML, CSS, Bootstrap, JS, jQuery, PHP, WordPress</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-deg">Coder (C# Training)</div>
+            <div class="edu-inst">HCC Technology Foundation</div>
+            <div class="edu-date">Feb 2022 – Apr 2022</div>
           </div>
         </div>
 
         <!-- Certifications -->
-        <div class="cv-section">
-          <div class="section-title">Certifications</div>
-          <div class="skill-tags">
-            <span class="skill-tag">SAP Business One – HCC Technology Foundation</span>
-            <span class="skill-tag">Microsoft C#.NET – HCC Technology Foundation</span>
-            <span class="skill-tag">English &amp; Soft Business Skills – HCC Technology Foundation</span>
-            <span class="skill-tag">Artificial Intelligence using Python – DigiSkills</span>
-            <span class="skill-tag">Data Analytics &amp; Business Intelligence – DigiSkills</span>
+        <div class="cv-sec">
+          <div class="sec-title">Certifications</div>
+          <div class="cert-item">
+            <div class="cert-name">AI Using Python &nbsp;·&nbsp; Data Analytics &amp; BI</div>
+            <div class="cert-org">DigiSkills</div>
+            <div class="cert-date">Apr 2026 – Jul 2026</div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-name">Project Planning with AI &nbsp;·&nbsp; Think Creatively with AI &nbsp;·&nbsp; Web Development</div>
+            <div class="cert-org">SoloLearn</div>
+            <div class="cert-date">Feb – Apr 2026</div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-name">SAP Business One</div>
+            <div class="cert-org">HCC Technology Foundation</div>
+            <div class="cert-date">Dec 2024 – Feb 2025</div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-name">Intro to HTML &nbsp;·&nbsp; Intro to C#</div>
+            <div class="cert-org">SoloLearn</div>
+            <div class="cert-date">Oct 2024 &nbsp;/&nbsp; Jan 2023</div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-name">English &amp; Soft Business Skills</div>
+            <div class="cert-org">HCC Technology Foundation &nbsp;/&nbsp; Leadership College</div>
+            <div class="cert-date">2015 &amp; 2022</div>
           </div>
         </div>
 
-        <!-- Key Strengths -->
-        <div class="cv-section">
-          <div class="section-title">Key Strengths</div>
-          <div class="skill-tags">
-            <span class="skill-tag">Clean Architecture</span>
-            <span class="skill-tag">Secure Code</span>
-            <span class="skill-tag">Scalable Solutions</span>
-            <span class="skill-tag">Timely Delivery</span>
-            <span class="skill-tag">Problem Solving</span>
-            <span class="skill-tag">Team Collaboration</span>
-            <span class="skill-tag">Analytical Skills</span>
-            <span class="skill-tag">Adaptability</span>
+        <!-- Languages -->
+        <div class="cv-sec">
+          <div class="sec-title">Languages</div>
+          <div class="tags">
+            <span class="tag">Urdu (Fluent)</span>
+            <span class="tag">English (Intermediate)</span>
+            <span class="tag">Punjabi (Fluent)</span>
           </div>
         </div>
 
-        <!-- Languages & Interests -->
-        <div class="cv-section">
-          <div class="section-title">Languages &amp; Interests</div>
-          <div class="skill-tags">
-            <span class="skill-tag">Urdu (Fluent)</span>
-            <span class="skill-tag">Punjabi (Fluent)</span>
-            <span class="skill-tag">English (Intermediate)</span>
-            <span class="skill-tag">Food Hunt</span>
-            <span class="skill-tag">Travelling</span>
-            <span class="skill-tag">Playing Games</span>
+        <!-- Soft Skills -->
+        <div class="cv-sec">
+          <div class="sec-title">Interpersonal Skills</div>
+          <div class="tags">
+            <span class="tag teal">Leadership</span><span class="tag teal">Training &amp; Mentoring</span>
+            <span class="tag teal">Teamwork</span><span class="tag teal">Problem-Solving</span>
+            <span class="tag teal">Communication</span><span class="tag teal">Adaptability</span>
+          </div>
+        </div>
+
+        <!-- Courses Delivered -->
+        <div class="cv-sec">
+          <div class="sec-title">Courses Delivered</div>
+          <div class="tags">
+            <span class="tag amber">C#</span><span class="tag amber">PHP</span><span class="tag amber">Python</span>
+            <span class="tag amber">HTML &amp; CSS</span><span class="tag amber">Bootstrap</span>
+            <span class="tag amber">JavaScript</span><span class="tag amber">Angular</span>
+            <span class="tag amber">Shopify</span><span class="tag amber">WordPress</span>
+            <span class="tag amber">Canva AI</span><span class="tag amber">Video Editing</span>
           </div>
         </div>
 
       </div>
 
-      <!-- RIGHT COLUMN -->
-      <div class="cv-right">
+      <!-- ═══ RIGHT ═══ -->
+      <div>
 
         <!-- Experience -->
-        <div class="cv-section">
-          <div class="section-title">Professional Experience</div>
+        <div class="cv-sec">
+          <div class="sec-title">Professional Experience</div>
 
           <div class="exp-item">
-            <div class="exp-header">
-              <div class="exp-role">Senior Full-Stack Developer</div>
-              <div class="exp-date">Current</div>
+            <div class="exp-top">
+              <div class="exp-role">Assistant Manager – Training &amp; Development</div>
+              <div class="exp-date">Sep 2022 – Present</div>
             </div>
-            <div class="exp-company">HCC Technology Foundation</div>
-            <ul class="exp-list">
-              <li>Develop enterprise-level web applications using Microsoft technologies</li>
-              <li>Design and maintain SQL Server databases and data models</li>
-              <li>Build secure REST APIs with JWT authentication and authorization</li>
-              <li>Create responsive, accessible user interfaces</li>
-              <li>Optimize application performance and resolve technical issues</li>
-              <li>Collaborate with teams on project planning and implementation</li>
+            <div class="exp-org">HCC Technology Foundation &nbsp;<span class="exp-loc">· Lahore</span></div>
+            <ul class="blist">
+              <li>Conduct technical training in C#, PHP, Python, Front-End, Angular, Shopify, and other programs</li>
+              <li>Develop course curricula, materials, assessments, and hands-on projects for beginner to intermediate learners</li>
+              <li>Mentor trainees, interns, and volunteers with code reviews and project support</li>
+              <li>Contribute to software development: ASP.NET Core, PHP, Wix, and web-based solutions</li>
             </ul>
           </div>
 
           <hr>
 
           <div class="exp-item">
-            <div class="exp-header">
+            <div class="exp-top">
               <div class="exp-role">Associate Technical Consultant</div>
+              <div class="exp-date">Nov 2022 – Present</div>
             </div>
-            <div class="exp-company">HCC-ME</div>
-            <ul class="exp-list">
+            <div class="exp-org">HCC-ME (HCC Middle East) &nbsp;<span class="exp-loc">· Lahore (Remote)</span></div>
+            <ul class="blist">
               <li>Requirement analysis and full-cycle software development</li>
               <li>API integrations and robust database design</li>
+              <li>SAP support &amp; data entry for Dubai-based client; SQL queries and stored procedures in SAP HANA</li>
               <li>Client support, technical consultation, and documentation</li>
-              <li>SAP support &amp; data entry for a Dubai-based client; wrote SQL queries and stored procedures in SAP HANA</li>
             </ul>
           </div>
 
           <hr>
 
           <div class="exp-item">
-            <div class="exp-header">
-              <div class="exp-role">Lead Technical Trainer</div>
+            <div class="exp-top">
+              <div class="exp-role">Intern – .NET Developer</div>
+              <div class="exp-date">Jun 2022 – Aug 2022</div>
             </div>
-            <div class="exp-company">HCC Technology Foundation</div>
-            <ul class="exp-list">
-              <li>Delivered beginner-to-advanced training in web development technologies</li>
-              <li>Guided students through real-world projects and practical exercises</li>
+            <div class="exp-org">HCC Technology Foundation &nbsp;<span class="exp-loc">· Lahore</span></div>
+            <ul class="blist">
+              <li>Worked on the Human Resource Management System (HRMS) as a .NET Developer</li>
+            </ul>
+          </div>
+
+          <hr>
+
+          <div class="exp-item">
+            <div class="exp-top">
+              <div class="exp-role">C# Developer</div>
+              <div class="exp-date">Nov 2020 – Jan 2021</div>
+            </div>
+            <div class="exp-org">RedCod Technologies &nbsp;<span class="exp-loc">· Lahore</span></div>
+            <ul class="blist">
+              <li>Developed Windows Forms desktop applications using C#</li>
+              <li>Hostel Management System and Shoe Inventory Management System</li>
             </ul>
           </div>
         </div>
 
         <!-- Projects -->
-        <div class="cv-section">
-          <div class="section-title">Key Projects</div>
+        <div class="cv-sec">
+          <div class="sec-title">Key Projects</div>
 
-          <div class="proj-item">
-            <div class="proj-name">Mehfilix – Event Management Portal</div>
-            <div class="proj-tech">ASP.NET Core 9 · EF Core · SQL Server · Chart.js</div>
-            <div class="proj-desc">Admin dashboard for event management with analytics, user management, revenue charts, and role-based navigation.</div>
+          <div class="proj">
+            <div class="proj-name">Human Resource Management System (HRMS)</div>
+            <div class="proj-tech">ASP.NET Core 6 · Web API · JWT · EF Core · SQL Server · Cloudinary · AJAX · AutoMapper</div>
+            <div class="proj-url">hccdempk.vdc.services:8083 &nbsp;|&nbsp; hrms.crowe.pk</div>
+            <div class="proj-desc">Enterprise HRMS covering recruitment, attendance, leave, payroll, loans, resignations, final settlement, and password recovery workflows.</div>
           </div>
 
-          <div class="proj-item">
-            <div class="proj-name">Alumni Community Portal</div>
-            <div class="proj-tech">ASP.NET Core · EF Core · SignalR · SQL Server</div>
-            <div class="proj-desc">Community platform with real-time chat, events, posts, member approvals, and role-based access control.</div>
+          <div class="proj">
+            <div class="proj-name">Alumni Community Portal – Crowe</div>
+            <div class="proj-tech">ASP.NET Core MVC · EF Core · SignalR · MailKit · SQL Server</div>
+            <div class="proj-url">alumni.crowe.pk</div>
+            <div class="proj-desc">Community platform with member registration &amp; approvals, profiles, posts, comments, events, one-to-one chat, notifications, and role-based access.</div>
           </div>
 
-          <div class="proj-item">
-            <div class="proj-name">HR Management System (HRMS)</div>
-            <div class="proj-tech">ASP.NET Core · SQL Server · JWT Auth</div>
-            <div class="proj-desc">Enterprise HR solution for employee management, attendance, leave, recruitment, and approval workflows.</div>
+          <div class="proj">
+            <div class="proj-name">HCC Global Website</div>
+            <div class="proj-tech">ASP.NET Core · SQL Server</div>
+            <div class="proj-url">hccglobal.io</div>
+            <div class="proj-desc">Corporate website with contact form, case studies module (frontend &amp; backend), and dynamic content management.</div>
           </div>
 
-          <div class="proj-item">
-            <div class="proj-name">Support Management System</div>
-            <div class="proj-tech">ASP.NET MVC · SQL Server</div>
-            <div class="proj-desc">Ticketing platform with workflow management, approvals, dashboards, reports, and email notifications.</div>
+          <div class="proj">
+            <div class="proj-name">HCC Oxford Website</div>
+            <div class="proj-tech">Wix · CMS</div>
+            <div class="proj-url">hccoxford.com</div>
+            <div class="proj-desc">Complete UK corporate website independently developed on Wix with responsive layouts and structured content.</div>
           </div>
 
-          <div class="proj-item">
-            <div class="proj-name">Tour'D Pakistan</div>
-            <div class="proj-tech">Angular · ASP.NET Core · SQL Server</div>
-            <div class="proj-desc">Tourism booking platform with destinations, hotel management, agencies, and responsive Angular SPA.</div>
-          </div>
-
-          <div class="proj-item">
-            <div class="proj-name">BeelineBeQuick – Courier Company Website</div>
-            <div class="proj-tech">PHP · MySQL · Bootstrap · JavaScript</div>
-            <div class="proj-desc">Courier company site (shipping, tracking, packing) with an admin panel supporting multiple admins and full service management.</div>
-          </div>
-
-          <div class="proj-item">
-            <div class="proj-name">FinCore Website &nbsp;|&nbsp; Mesh Mavens &nbsp;|&nbsp; Brandsol</div>
-            <div class="proj-tech">PHP · MySQL · Bootstrap · JavaScript</div>
-            <div class="proj-desc">Corporate and business client websites with admin dashboards, portfolio management, career portals, contact forms, and ongoing maintenance.</div>
-          </div>
-
-          <div class="proj-item">
-            <div class="proj-name">HCC Corporate &amp; Gulmohar Education Websites</div>
+          <div class="proj">
+            <div class="proj-name">Gulmohar Education Website</div>
             <div class="proj-tech">Wix · Velo · CMS · JavaScript</div>
-            <div class="proj-desc">Professional websites with dynamic CMS content, events, newsletters, and modern responsive layouts.</div>
+            <div class="proj-url">gulmohareducation.com</div>
+            <div class="proj-desc">CMS-driven educational website with dynamic events, newsletters, employment &amp; volunteer opportunities, accordions, and repeaters.</div>
           </div>
 
-          <div class="proj-item">
-            <div class="proj-name">KaprayVaghera E-Commerce &nbsp;|&nbsp; Room Scheduling System &nbsp;|&nbsp; E-Music (FYP)</div>
-            <div class="proj-tech">PHP · MySQL · jQuery</div>
-            <div class="proj-desc">E-commerce cart &amp; orders; room reservation with conflict detection; royalty-free music platform with free/paid downloads and admin-approved orders.</div>
+          <div class="proj">
+            <div class="proj-name">Support System &amp; Complaint Portal – HCC / Crowe</div>
+            <div class="proj-tech">ASP.NET MVC · SQL Server</div>
+            <div class="proj-url">hccdempk.vdc.services:8080 &nbsp;|&nbsp; complaint.crowe.pk</div>
+            <div class="proj-desc">Ticketing portals for client support and internal IT queries with workflows, approvals, assignment, priorities, notifications, and dashboards.</div>
+          </div>
+
+          <div class="proj">
+            <div class="proj-name">Mehfilix – Event Management Admin Dashboard</div>
+            <div class="proj-tech">ASP.NET Core 9 · MVC · Bootstrap 5 · Chart.js</div>
+            <div class="proj-desc">Admin dashboard with analytics cards, revenue charts, event &amp; user management, and role-based navigation (DB integration in progress).</div>
+          </div>
+
+          <div class="proj">
+            <div class="proj-name">BeelineBeQuick</div>
+            <div class="proj-tech">PHP · MySQL</div>
+            <div class="proj-url">beelinebequick.com</div>
+            <div class="proj-desc">Courier services website with backend, admin panel, shipping, tracking, packing, and service management.</div>
+          </div>
+
+          <div class="proj">
+            <div class="proj-name">FinCoreGroup &nbsp;·&nbsp; Mesh Mavens &nbsp;·&nbsp; Brandsol</div>
+            <div class="proj-tech">PHP · MySQL · Bootstrap · JavaScript</div>
+            <div class="proj-url">thefincoregroup.com</div>
+            <div class="proj-desc">Responsive corporate and business websites with portfolio management, admin dashboards, career portals, and contact forms.</div>
+          </div>
+
+          <div class="proj">
+            <div class="proj-name">Emusic – Final Year Project</div>
+            <div class="proj-tech">PHP · MySQL · HTML · CSS · Bootstrap</div>
+            <div class="proj-desc">Full-stack music platform with royalty-free streaming, free/paid downloads, admin panel for songs and categories, and customer reviews.</div>
+          </div>
+
+          <div class="proj">
+            <div class="proj-name">KaprayVaghera E-Commerce &nbsp;·&nbsp; Room Scheduling System</div>
+            <div class="proj-tech">PHP · MySQL</div>
+            <div class="proj-desc">Online shopping platform with cart, wishlist, orders; room reservation system with calendar, conflict detection, and departmental booking.</div>
           </div>
 
         </div>
 
       </div>
-    </div><!-- /cv-body -->
-
-  </div><!-- /page -->
-
+    </div>
+  </div>
 </body>
 </html>
